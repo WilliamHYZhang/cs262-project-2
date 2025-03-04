@@ -23,35 +23,56 @@ The goal of this project was to simulate a small asynchronous distributed system
 
 ## Observations from Trials
 
-Here we focus on specifically Trials 1 and 2, but we observe that all of the trials show similar behavior, discussed more in the conclusion.
+Here we focus specifically on Trials 1 and 2, but we observe similar behavior across all trials.
 
 ### Trial 1
 - **VM1 Observations:**  
-  The log for VM1 begins with send events (logical clock values 1 and 2). Shortly thereafter, a receive event causes the clock to jump to 11 (demonstrating the Lamport update rule). Several receive events follow (e.g., jumps from 14 to 27 and then to 33), which indicate that messages arriving from VM2 carried higher clock values. Internal events then increment the clock gradually.
+  VM1 has a tick rate of approximately **1 tick/sec**, evidenced by consistent ~1-second intervals between internal events. The log for VM1 begins with send events (logical clock values 1 and 2). Shortly thereafter, a receive event causes the clock to jump to 11 (demonstrating the Lamport update rule). Several receive events follow (e.g., jumps from 14 to 27 and then to 33), indicating that messages arriving from VM2 carried higher clock values. Internal events then increment the clock gradually.
 
 - **VM2 Observations:**  
-  VM2’s log starts with a series of internal events and then proceeds to send messages to both VM3 and VM1. Its logical clock increases smoothly, with occasional bursts in the message queue length suggesting that it sometimes receives messages faster than it can process them.
+  VM2 exhibits a significantly higher tick rate (~4 ticks/sec), logging frequent events at shorter intervals. Its log starts with internal events and proceeds to send messages to both VM3 and VM1. Its logical clock increases smoothly, with occasional bursts in the message queue length, suggesting it sometimes receives messages faster than it can process them.
 
 - **VM3 Observations:**  
-  VM3 initially logs internal events and later starts receiving messages from both VM1 and VM2. Its logical clock increments modestly during early events and later shows send events that propagate its own clock values. The overall behavior reflects a combination of internal progression and influences from incoming messages.
+  VM3 also operates at about **1 tick/sec**, initially logging internal events and later starting to receive messages from both VM1 and VM2. Its logical clock increments modestly during early events and later shows send events propagating its own clock values. The slower tick rate leads to notable clock jumps when receiving messages from the faster VM2.
 
 ### Trial 2
-- **VM1 Observations (Trial 2):**  
-  In this trial, VM1 exhibits a more rhythmic pattern at the beginning—with early send events (clock values 1–2) followed by internal events and additional send events (clock values 4–5). When messages are received (e.g., at logical clocks 19 and 22), the clock jumps are clearly visible. Although the pacing differs slightly from Trial 1, the underlying mechanism is the same.
+- **VM1 Observations:**  
+  VM1 increases its tick rate to approximately **5 ticks/sec**, resulting in frequent internal and send events. It exhibits a rhythmic pattern initially—with early send events (clock values 1–2) followed by internal and additional send events (clock values 4–5). Message receptions (e.g., at logical clocks 19 and 22) show visible jumps. Although pacing differs slightly from Trial 1, the underlying mechanism remains consistent.
 
-- **VM2 and VM3 Observations (Trial 2):**  
-  - **VM2:** The log shows a higher rate of incoming messages, with longer queue lengths (sometimes exceeding 20 messages), indicating burstier message traffic.  
-  - **VM3:** The log demonstrates a mix of internal events and both send and receive events. Its logical clock increments steadily until significant jumps occur during send events.
-  
+- **VM2 Observations:**  
+  VM2's tick rate decreases significantly to about **1 tick/sec**, becoming the slowest node and experiencing significant message queue backlogs. Logs indicate higher incoming message rates with longer queues (sometimes exceeding 20 messages), signifying burstier traffic.
+
+- **VM3 Observations:**  
+  VM3 operates at a moderate tick rate (~3 ticks/sec), showing a balanced event-processing rate and queue management. It demonstrates a mix of internal, send, and receive events. The logical clock increments steadily until significant jumps occur upon message reception.
+
 ### General Findings
 Across all trials—including Trials 1 and 2—the core behavior remains consistent:
-- **Logical Clock Updates:** Internal events increment the clock by one, while receiving a message updates the clock to one more than the maximum of the local and received clocks.
-- **Asynchronous Processing:** The logical clocks “drift” apart based solely on the causal ordering of events and the randomized nature of event selection, even though the underlying physical time remains essentially the same.
-- **Message Queue Dynamics:** Variations in message queue lengths reflect differences in how fast a VM processes messages compared to the rate at which they arrive. This, in turn, affects the size of the clock jumps when messages are processed.
+- **Logical Clock Updates:** Internal events increment the clock by one, while receiving messages updates the clock to one more than the maximum of the local and received clocks.
+- **Asynchronous Processing:** Logical clocks “drift” apart based solely on causal ordering and randomized event selection, despite underlying physical time synchronization.
+- **Message Queue Dynamics:** Variations in message queue lengths reflect differences in how fast VMs process messages relative to their arrival rates. This affects the magnitude of logical clock jumps when messages are processed.
+
+### Running with Smaller Variations and Lower Event Probabilities
+We reran the simulation with the following modifications from the original design:
+- **Reduced Clock Rate Variation:** Adjusted tick rates to a smaller range (1–2 ticks/sec) to limit the clock frequency disparity among VMs.
+- **Lower Internal Event Probability:** Increased the likelihood of send events (reduced probability of internal events), making interactions between VMs more frequent.
+
+```python
+# Original code:
+self.clock_rate = random.randint(1, 6)  # Original tick rate range
+rand_val = random.randint(1, 10)        # Original event probability
+
+# Modified for rerun with smaller variations and lower internal event probability:
+self.clock_rate = random.randint(1, 2)  # Reduced tick rate variation (1–2 ticks/sec)
+rand_val = random.randint(1, 5)         # Increased send event probability (e.g., internal events less likely)
+```
+
+Under these new conditions, logical clocks remained closer to each other with fewer and smaller jumps in logical clock values. The message queues maintained shorter lengths, reflecting a smoother flow of messages between VMs. This resulted in increased synchronization and decreased message congestion compared to trials with higher variation and internal event probabilities.
+
+This rerun highlights the sensitivity of logical clock behavior to timing parameters and event probabilities, demonstrating how even modest parameter adjustments significantly improve overall synchronization and message-handling efficiency.
 
 ## Conclusions
-All trials (as evidenced by Trials 1 and 2) demonstrate the same underlying behavior:
-- The system reliably adheres to the Lamport clock mechanism.
-- Despite variations in the timing and size of clock jumps, all VMs maintain a consistent causal ordering.
-- The observed differences (such as the burstiness of message traffic and varying queue lengths) are due to the inherent randomness in event selection and clock rate, not any flaws in the logical clock algorithm.
-- Overall, while the specific numerical values differ between trials, the fundamental behavior is the same across all trials.
+All trials demonstrate consistent underlying behavior:
+- The system reliably adheres to the Lamport clock mechanism despite variations in tick rates.
+- Tick rate differences significantly influence logical clock progression, message traffic patterns, and queue congestion.
+- Observed variations (message bursts, queue lengths) underscore the importance of timing and synchronization in distributed systems.
+
