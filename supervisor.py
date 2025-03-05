@@ -128,7 +128,7 @@ def plot_avg_inter_event(avg_data):
 
 if __name__ == "__main__":
     num_trials = 5
-    duration = 60  # seconds per trial
+    duration = 600  # seconds per trial
 
     # Run each trial.
     for trial in range(1, num_trials + 1):
