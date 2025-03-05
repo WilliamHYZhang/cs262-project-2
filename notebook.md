@@ -76,8 +76,8 @@ We explored further variations to evaluate system behavior under extreme conditi
 
 ```python
 # Extreme variation simulation:
-self.clock_rate = random.randint(1, 50)  # High variability in tick rate (1-50 ticks/sec)
-rand_val = random.randint(1, 50)         # Wide range of event probabilities
+self.clock_rate = random.randint(1, 20)  # High variability in tick rate (1-50 ticks/sec)
+rand_val = random.randint(1, 20)         # Wide range of event probabilities
 ```
 
 Under these extreme conditions, the following observations were noted:

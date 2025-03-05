@@ -10,7 +10,7 @@ class VirtualMachine:
         self.vm_id = vm_id
         self.port = port
         self.peers = peers  # dict mapping peer id to websocket URL
-        self.clock_rate = random.randint(1, 6)  # ticks per (real world) second
+        self.clock_rate = random.randint(1, 20)  # ticks per (real world) second
         self.logical_clock = 0
         self.msg_queue = asyncio.Queue()
         self.connections = {}  # mapping: peer id -> websocket connection
@@ -78,7 +78,7 @@ class VirtualMachine:
                 queue_length = self.msg_queue.qsize()
                 self.log_event("RECEIVE", f"Received from VM {msg.get('sender')}. Queue length: {queue_length}")
             else:
-                rand_val = random.randint(1, 10)
+                rand_val = random.randint(1, 20)
                 if rand_val in (1, 2, 3):
                     targets = []
                     if rand_val == 1:

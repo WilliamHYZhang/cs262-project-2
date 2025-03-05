@@ -1,0 +1,374 @@
+1741205770.375 - INTERNAL - Logical Clock: 1 - Internal event occurred
+1741205770.544 - SEND - Logical Clock: 2 - Sent to VM 2
+1741205770.712 - INTERNAL - Logical Clock: 3 - Internal event occurred
+1741205770.879 - RECEIVE - Logical Clock: 6 - Received from VM 2. Queue length: 0
+1741205771.048 - INTERNAL - Logical Clock: 7 - Internal event occurred
+1741205771.216 - SEND - Logical Clock: 8 - Sent to VM 2
+1741205771.384 - INTERNAL - Logical Clock: 9 - Internal event occurred
+1741205771.553 - INTERNAL - Logical Clock: 10 - Internal event occurred
+1741205771.721 - RECEIVE - Logical Clock: 15 - Received from VM 2. Queue length: 0
+1741205771.889 - INTERNAL - Logical Clock: 16 - Internal event occurred
+1741205772.057 - INTERNAL - Logical Clock: 17 - Internal event occurred
+1741205772.225 - INTERNAL - Logical Clock: 18 - Internal event occurred
+1741205772.394 - RECEIVE - Logical Clock: 24 - Received from VM 2. Queue length: 0
+1741205772.562 - RECEIVE - Logical Clock: 25 - Received from VM 2. Queue length: 0
+1741205772.730 - RECEIVE - Logical Clock: 28 - Received from VM 2. Queue length: 1
+1741205772.898 - RECEIVE - Logical Clock: 29 - Received from VM 2. Queue length: 1
+1741205773.066 - RECEIVE - Logical Clock: 31 - Received from VM 1. Queue length: 0
+1741205773.235 - SEND - Logical Clock: 32 - Sent to VM 1
+1741205773.235 - SEND - Logical Clock: 33 - Sent to VM 2
+1741205773.403 - INTERNAL - Logical Clock: 34 - Internal event occurred
+1741205773.571 - INTERNAL - Logical Clock: 35 - Internal event occurred
+1741205773.739 - RECEIVE - Logical Clock: 40 - Received from VM 2. Queue length: 0
+1741205773.907 - INTERNAL - Logical Clock: 41 - Internal event occurred
+1741205774.075 - RECEIVE - Logical Clock: 44 - Received from VM 1. Queue length: 0
+1741205774.244 - INTERNAL - Logical Clock: 45 - Internal event occurred
+1741205774.412 - INTERNAL - Logical Clock: 46 - Internal event occurred
+1741205774.580 - INTERNAL - Logical Clock: 47 - Internal event occurred
+1741205774.748 - INTERNAL - Logical Clock: 48 - Internal event occurred
+1741205774.916 - RECEIVE - Logical Clock: 54 - Received from VM 2. Queue length: 0
+1741205775.085 - SEND - Logical Clock: 55 - Sent to VM 1
+1741205775.085 - SEND - Logical Clock: 56 - Sent to VM 2
+1741205775.252 - INTERNAL - Logical Clock: 57 - Internal event occurred
+1741205775.420 - INTERNAL - Logical Clock: 58 - Internal event occurred
+1741205775.589 - INTERNAL - Logical Clock: 59 - Internal event occurred
+1741205775.758 - RECEIVE - Logical Clock: 63 - Received from VM 1. Queue length: 0
+1741205775.925 - INTERNAL - Logical Clock: 64 - Internal event occurred
+1741205776.093 - RECEIVE - Logical Clock: 68 - Received from VM 2. Queue length: 0
+1741205776.260 - INTERNAL - Logical Clock: 69 - Internal event occurred
+1741205776.428 - RECEIVE - Logical Clock: 71 - Received from VM 2. Queue length: 0
+1741205776.595 - INTERNAL - Logical Clock: 72 - Internal event occurred
+1741205776.764 - RECEIVE - Logical Clock: 75 - Received from VM 2. Queue length: 0
+1741205776.932 - INTERNAL - Logical Clock: 76 - Internal event occurred
+1741205777.100 - RECEIVE - Logical Clock: 80 - Received from VM 1. Queue length: 0
+1741205777.268 - INTERNAL - Logical Clock: 81 - Internal event occurred
+1741205777.436 - INTERNAL - Logical Clock: 82 - Internal event occurred
+1741205777.604 - INTERNAL - Logical Clock: 83 - Internal event occurred
+1741205777.772 - INTERNAL - Logical Clock: 84 - Internal event occurred
+1741205777.940 - INTERNAL - Logical Clock: 85 - Internal event occurred
+1741205778.109 - RECEIVE - Logical Clock: 91 - Received from VM 1. Queue length: 0
+1741205778.277 - INTERNAL - Logical Clock: 92 - Internal event occurred
+1741205778.446 - SEND - Logical Clock: 93 - Sent to VM 2
+1741205778.614 - INTERNAL - Logical Clock: 94 - Internal event occurred
+1741205778.782 - INTERNAL - Logical Clock: 95 - Internal event occurred
+1741205778.950 - INTERNAL - Logical Clock: 96 - Internal event occurred
+1741205779.118 - INTERNAL - Logical Clock: 97 - Internal event occurred
+1741205779.287 - INTERNAL - Logical Clock: 98 - Internal event occurred
+1741205779.455 - INTERNAL - Logical Clock: 99 - Internal event occurred
+1741205779.622 - INTERNAL - Logical Clock: 100 - Internal event occurred
+1741205779.791 - SEND - Logical Clock: 101 - Sent to VM 2
+1741205779.958 - INTERNAL - Logical Clock: 102 - Internal event occurred
+1741205780.126 - INTERNAL - Logical Clock: 103 - Internal event occurred
+1741205780.295 - SEND - Logical Clock: 104 - Sent to VM 1
+1741205780.463 - INTERNAL - Logical Clock: 105 - Internal event occurred
+1741205780.631 - RECEIVE - Logical Clock: 119 - Received from VM 2. Queue length: 0
+1741205780.799 - INTERNAL - Logical Clock: 120 - Internal event occurred
+1741205780.968 - SEND - Logical Clock: 121 - Sent to VM 2
+1741205781.135 - RECEIVE - Logical Clock: 124 - Received from VM 1. Queue length: 1
+1741205781.303 - RECEIVE - Logical Clock: 125 - Received from VM 1. Queue length: 1
+1741205781.471 - RECEIVE - Logical Clock: 126 - Received from VM 2. Queue length: 0
+1741205781.640 - RECEIVE - Logical Clock: 131 - Received from VM 1. Queue length: 0
+1741205781.809 - SEND - Logical Clock: 132 - Sent to VM 2
+1741205781.977 - INTERNAL - Logical Clock: 133 - Internal event occurred
+1741205782.144 - INTERNAL - Logical Clock: 134 - Internal event occurred
+1741205782.313 - INTERNAL - Logical Clock: 135 - Internal event occurred
+1741205782.481 - INTERNAL - Logical Clock: 136 - Internal event occurred
+1741205782.648 - INTERNAL - Logical Clock: 137 - Internal event occurred
+1741205782.816 - INTERNAL - Logical Clock: 138 - Internal event occurred
+1741205782.984 - RECEIVE - Logical Clock: 147 - Received from VM 2. Queue length: 0
+1741205783.153 - SEND - Logical Clock: 148 - Sent to VM 1
+1741205783.153 - SEND - Logical Clock: 149 - Sent to VM 2
+1741205783.321 - INTERNAL - Logical Clock: 150 - Internal event occurred
+1741205783.489 - INTERNAL - Logical Clock: 151 - Internal event occurred
+1741205783.658 - INTERNAL - Logical Clock: 152 - Internal event occurred
+1741205783.826 - SEND - Logical Clock: 153 - Sent to VM 1
+1741205783.995 - INTERNAL - Logical Clock: 154 - Internal event occurred
+1741205784.162 - INTERNAL - Logical Clock: 155 - Internal event occurred
+1741205784.331 - INTERNAL - Logical Clock: 156 - Internal event occurred
+1741205784.498 - RECEIVE - Logical Clock: 164 - Received from VM 1. Queue length: 0
+1741205784.666 - INTERNAL - Logical Clock: 165 - Internal event occurred
+1741205784.834 - RECEIVE - Logical Clock: 167 - Received from VM 2. Queue length: 2
+1741205785.002 - RECEIVE - Logical Clock: 168 - Received from VM 2. Queue length: 1
+1741205785.170 - RECEIVE - Logical Clock: 169 - Received from VM 1. Queue length: 0
+1741205785.338 - RECEIVE - Logical Clock: 174 - Received from VM 2. Queue length: 0
+1741205785.506 - INTERNAL - Logical Clock: 175 - Internal event occurred
+1741205785.674 - RECEIVE - Logical Clock: 176 - Received from VM 1. Queue length: 1
+1741205785.843 - RECEIVE - Logical Clock: 178 - Received from VM 1. Queue length: 1
+1741205786.012 - RECEIVE - Logical Clock: 179 - Received from VM 1. Queue length: 1
+1741205786.179 - RECEIVE - Logical Clock: 183 - Received from VM 2. Queue length: 0
+1741205786.348 - INTERNAL - Logical Clock: 184 - Internal event occurred
+1741205786.515 - INTERNAL - Logical Clock: 185 - Internal event occurred
+1741205786.683 - RECEIVE - Logical Clock: 190 - Received from VM 2. Queue length: 0
+1741205786.850 - INTERNAL - Logical Clock: 191 - Internal event occurred
+1741205787.018 - INTERNAL - Logical Clock: 192 - Internal event occurred
+1741205787.187 - INTERNAL - Logical Clock: 193 - Internal event occurred
+1741205787.354 - RECEIVE - Logical Clock: 196 - Received from VM 2. Queue length: 1
+1741205787.522 - RECEIVE - Logical Clock: 198 - Received from VM 1. Queue length: 0
+1741205787.691 - INTERNAL - Logical Clock: 199 - Internal event occurred
+1741205787.859 - SEND - Logical Clock: 200 - Sent to VM 1
+1741205788.027 - INTERNAL - Logical Clock: 201 - Internal event occurred
+1741205788.196 - INTERNAL - Logical Clock: 202 - Internal event occurred
+1741205788.364 - INTERNAL - Logical Clock: 203 - Internal event occurred
+1741205788.531 - INTERNAL - Logical Clock: 204 - Internal event occurred
+1741205788.699 - RECEIVE - Logical Clock: 213 - Received from VM 1. Queue length: 0
+1741205788.867 - RECEIVE - Logical Clock: 216 - Received from VM 2. Queue length: 0
+1741205789.035 - RECEIVE - Logical Clock: 218 - Received from VM 2. Queue length: 0
+1741205789.203 - INTERNAL - Logical Clock: 219 - Internal event occurred
+1741205789.371 - INTERNAL - Logical Clock: 220 - Internal event occurred
+1741205789.539 - INTERNAL - Logical Clock: 221 - Internal event occurred
+1741205789.708 - INTERNAL - Logical Clock: 222 - Internal event occurred
+1741205789.875 - INTERNAL - Logical Clock: 223 - Internal event occurred
+1741205790.044 - SEND - Logical Clock: 224 - Sent to VM 1
+1741205790.044 - SEND - Logical Clock: 225 - Sent to VM 2
+1741205790.211 - INTERNAL - Logical Clock: 226 - Internal event occurred
+1741205790.378 - INTERNAL - Logical Clock: 227 - Internal event occurred
+1741205790.546 - RECEIVE - Logical Clock: 234 - Received from VM 1. Queue length: 0
+1741205790.715 - SEND - Logical Clock: 235 - Sent to VM 1
+1741205790.882 - INTERNAL - Logical Clock: 236 - Internal event occurred
+1741205791.051 - INTERNAL - Logical Clock: 237 - Internal event occurred
+1741205791.219 - RECEIVE - Logical Clock: 243 - Received from VM 1. Queue length: 0
+1741205791.386 - INTERNAL - Logical Clock: 244 - Internal event occurred
+1741205791.554 - RECEIVE - Logical Clock: 248 - Received from VM 1. Queue length: 0
+1741205791.723 - INTERNAL - Logical Clock: 249 - Internal event occurred
+1741205791.891 - SEND - Logical Clock: 250 - Sent to VM 1
+1741205792.059 - INTERNAL - Logical Clock: 251 - Internal event occurred
+1741205792.227 - INTERNAL - Logical Clock: 252 - Internal event occurred
+1741205792.395 - INTERNAL - Logical Clock: 253 - Internal event occurred
+1741205792.563 - RECEIVE - Logical Clock: 259 - Received from VM 2. Queue length: 0
+1741205792.731 - RECEIVE - Logical Clock: 262 - Received from VM 1. Queue length: 0
+1741205792.898 - INTERNAL - Logical Clock: 263 - Internal event occurred
+1741205793.067 - INTERNAL - Logical Clock: 264 - Internal event occurred
+1741205793.234 - RECEIVE - Logical Clock: 268 - Received from VM 1. Queue length: 0
+1741205793.403 - SEND - Logical Clock: 269 - Sent to VM 1
+1741205793.403 - SEND - Logical Clock: 270 - Sent to VM 2
+1741205793.570 - INTERNAL - Logical Clock: 271 - Internal event occurred
+1741205793.738 - INTERNAL - Logical Clock: 272 - Internal event occurred
+1741205793.905 - INTERNAL - Logical Clock: 273 - Internal event occurred
+1741205794.074 - INTERNAL - Logical Clock: 274 - Internal event occurred
+1741205794.242 - INTERNAL - Logical Clock: 275 - Internal event occurred
+1741205794.409 - INTERNAL - Logical Clock: 276 - Internal event occurred
+1741205794.577 - INTERNAL - Logical Clock: 277 - Internal event occurred
+1741205794.745 - RECEIVE - Logical Clock: 285 - Received from VM 1. Queue length: 0
+1741205794.913 - RECEIVE - Logical Clock: 288 - Received from VM 2. Queue length: 0
+1741205795.082 - INTERNAL - Logical Clock: 289 - Internal event occurred
+1741205795.250 - SEND - Logical Clock: 290 - Sent to VM 2
+1741205795.418 - INTERNAL - Logical Clock: 291 - Internal event occurred
+1741205795.586 - RECEIVE - Logical Clock: 295 - Received from VM 2. Queue length: 0
+1741205795.755 - SEND - Logical Clock: 296 - Sent to VM 1
+1741205795.755 - SEND - Logical Clock: 297 - Sent to VM 2
+1741205795.923 - SEND - Logical Clock: 298 - Sent to VM 2
+1741205796.092 - RECEIVE - Logical Clock: 301 - Received from VM 2. Queue length: 0
+1741205796.259 - INTERNAL - Logical Clock: 302 - Internal event occurred
+1741205796.427 - INTERNAL - Logical Clock: 303 - Internal event occurred
+1741205796.595 - INTERNAL - Logical Clock: 304 - Internal event occurred
+1741205796.763 - INTERNAL - Logical Clock: 305 - Internal event occurred
+1741205796.932 - INTERNAL - Logical Clock: 306 - Internal event occurred
+1741205797.100 - INTERNAL - Logical Clock: 307 - Internal event occurred
+1741205797.268 - SEND - Logical Clock: 308 - Sent to VM 2
+1741205797.436 - SEND - Logical Clock: 309 - Sent to VM 1
+1741205797.436 - SEND - Logical Clock: 310 - Sent to VM 2
+1741205797.603 - INTERNAL - Logical Clock: 311 - Internal event occurred
+1741205797.771 - INTERNAL - Logical Clock: 312 - Internal event occurred
+1741205797.940 - INTERNAL - Logical Clock: 313 - Internal event occurred
+1741205798.108 - INTERNAL - Logical Clock: 314 - Internal event occurred
+1741205798.276 - INTERNAL - Logical Clock: 315 - Internal event occurred
+1741205798.443 - RECEIVE - Logical Clock: 327 - Received from VM 2. Queue length: 0
+1741205798.611 - INTERNAL - Logical Clock: 328 - Internal event occurred
+1741205798.779 - INTERNAL - Logical Clock: 329 - Internal event occurred
+1741205798.947 - RECEIVE - Logical Clock: 334 - Received from VM 1. Queue length: 0
+1741205799.115 - INTERNAL - Logical Clock: 335 - Internal event occurred
+1741205799.283 - INTERNAL - Logical Clock: 336 - Internal event occurred
+1741205799.451 - RECEIVE - Logical Clock: 339 - Received from VM 1. Queue length: 0
+1741205799.619 - RECEIVE - Logical Clock: 340 - Received from VM 2. Queue length: 0
+1741205799.788 - SEND - Logical Clock: 341 - Sent to VM 1
+1741205799.956 - INTERNAL - Logical Clock: 342 - Internal event occurred
+1741205800.124 - RECEIVE - Logical Clock: 345 - Received from VM 2. Queue length: 0
+1741205800.292 - INTERNAL - Logical Clock: 346 - Internal event occurred
+1741205800.460 - RECEIVE - Logical Clock: 351 - Received from VM 1. Queue length: 0
+1741205800.628 - RECEIVE - Logical Clock: 352 - Received from VM 2. Queue length: 0
+1741205800.797 - SEND - Logical Clock: 353 - Sent to VM 1
+1741205800.797 - SEND - Logical Clock: 354 - Sent to VM 2
+1741205800.965 - INTERNAL - Logical Clock: 355 - Internal event occurred
+1741205801.133 - INTERNAL - Logical Clock: 356 - Internal event occurred
+1741205801.301 - RECEIVE - Logical Clock: 359 - Received from VM 2. Queue length: 0
+1741205801.469 - RECEIVE - Logical Clock: 363 - Received from VM 1. Queue length: 0
+1741205801.637 - INTERNAL - Logical Clock: 364 - Internal event occurred
+1741205801.805 - INTERNAL - Logical Clock: 365 - Internal event occurred
+1741205801.973 - RECEIVE - Logical Clock: 369 - Received from VM 1. Queue length: 0
+1741205802.142 - INTERNAL - Logical Clock: 370 - Internal event occurred
+1741205802.309 - INTERNAL - Logical Clock: 371 - Internal event occurred
+1741205802.478 - RECEIVE - Logical Clock: 375 - Received from VM 1. Queue length: 0
+1741205802.646 - INTERNAL - Logical Clock: 376 - Internal event occurred
+1741205802.815 - INTERNAL - Logical Clock: 377 - Internal event occurred
+1741205802.983 - SEND - Logical Clock: 378 - Sent to VM 1
+1741205803.151 - INTERNAL - Logical Clock: 379 - Internal event occurred
+1741205803.319 - INTERNAL - Logical Clock: 380 - Internal event occurred
+1741205803.486 - RECEIVE - Logical Clock: 387 - Received from VM 2. Queue length: 0
+1741205803.655 - SEND - Logical Clock: 388 - Sent to VM 1
+1741205803.823 - INTERNAL - Logical Clock: 389 - Internal event occurred
+1741205803.991 - INTERNAL - Logical Clock: 390 - Internal event occurred
+1741205804.160 - INTERNAL - Logical Clock: 391 - Internal event occurred
+1741205804.327 - INTERNAL - Logical Clock: 392 - Internal event occurred
+1741205804.495 - RECEIVE - Logical Clock: 398 - Received from VM 2. Queue length: 0
+1741205804.663 - INTERNAL - Logical Clock: 399 - Internal event occurred
+1741205804.832 - INTERNAL - Logical Clock: 400 - Internal event occurred
+1741205805.000 - INTERNAL - Logical Clock: 401 - Internal event occurred
+1741205805.167 - INTERNAL - Logical Clock: 402 - Internal event occurred
+1741205805.335 - RECEIVE - Logical Clock: 408 - Received from VM 2. Queue length: 0
+1741205805.502 - RECEIVE - Logical Clock: 409 - Received from VM 2. Queue length: 0
+1741205805.670 - INTERNAL - Logical Clock: 410 - Internal event occurred
+1741205805.839 - INTERNAL - Logical Clock: 411 - Internal event occurred
+1741205806.006 - RECEIVE - Logical Clock: 416 - Received from VM 2. Queue length: 0
+1741205806.174 - INTERNAL - Logical Clock: 417 - Internal event occurred
+1741205806.342 - INTERNAL - Logical Clock: 418 - Internal event occurred
+1741205806.510 - INTERNAL - Logical Clock: 419 - Internal event occurred
+1741205806.679 - SEND - Logical Clock: 420 - Sent to VM 1
+1741205806.679 - SEND - Logical Clock: 421 - Sent to VM 2
+1741205806.846 - INTERNAL - Logical Clock: 422 - Internal event occurred
+1741205807.015 - INTERNAL - Logical Clock: 423 - Internal event occurred
+1741205807.183 - INTERNAL - Logical Clock: 424 - Internal event occurred
+1741205807.352 - SEND - Logical Clock: 425 - Sent to VM 1
+1741205807.352 - SEND - Logical Clock: 426 - Sent to VM 2
+1741205807.520 - RECEIVE - Logical Clock: 433 - Received from VM 1. Queue length: 0
+1741205807.688 - INTERNAL - Logical Clock: 434 - Internal event occurred
+1741205807.856 - INTERNAL - Logical Clock: 435 - Internal event occurred
+1741205808.024 - INTERNAL - Logical Clock: 436 - Internal event occurred
+1741205808.193 - SEND - Logical Clock: 437 - Sent to VM 1
+1741205808.193 - SEND - Logical Clock: 438 - Sent to VM 2
+1741205808.361 - SEND - Logical Clock: 439 - Sent to VM 1
+1741205808.361 - SEND - Logical Clock: 440 - Sent to VM 2
+1741205808.528 - INTERNAL - Logical Clock: 441 - Internal event occurred
+1741205808.697 - INTERNAL - Logical Clock: 442 - Internal event occurred
+1741205808.865 - RECEIVE - Logical Clock: 448 - Received from VM 1. Queue length: 0
+1741205809.032 - INTERNAL - Logical Clock: 449 - Internal event occurred
+1741205809.201 - INTERNAL - Logical Clock: 450 - Internal event occurred
+1741205809.368 - INTERNAL - Logical Clock: 451 - Internal event occurred
+1741205809.536 - INTERNAL - Logical Clock: 452 - Internal event occurred
+1741205809.705 - SEND - Logical Clock: 453 - Sent to VM 2
+1741205809.873 - INTERNAL - Logical Clock: 454 - Internal event occurred
+1741205810.042 - SEND - Logical Clock: 455 - Sent to VM 1
+1741205810.042 - SEND - Logical Clock: 456 - Sent to VM 2
+1741205810.209 - INTERNAL - Logical Clock: 457 - Internal event occurred
+1741205810.377 - RECEIVE - Logical Clock: 465 - Received from VM 1. Queue length: 0
+1741205810.544 - RECEIVE - Logical Clock: 466 - Received from VM 2. Queue length: 0
+1741205810.713 - INTERNAL - Logical Clock: 467 - Internal event occurred
+1741205810.881 - RECEIVE - Logical Clock: 469 - Received from VM 1. Queue length: 0
+1741205811.049 - INTERNAL - Logical Clock: 470 - Internal event occurred
+1741205811.218 - RECEIVE - Logical Clock: 472 - Received from VM 2. Queue length: 1
+1741205811.385 - RECEIVE - Logical Clock: 474 - Received from VM 1. Queue length: 0
+1741205811.553 - INTERNAL - Logical Clock: 475 - Internal event occurred
+1741205811.722 - INTERNAL - Logical Clock: 476 - Internal event occurred
+1741205811.890 - INTERNAL - Logical Clock: 477 - Internal event occurred
+1741205812.057 - INTERNAL - Logical Clock: 478 - Internal event occurred
+1741205812.226 - INTERNAL - Logical Clock: 479 - Internal event occurred
+1741205812.393 - INTERNAL - Logical Clock: 480 - Internal event occurred
+1741205812.561 - RECEIVE - Logical Clock: 489 - Received from VM 2. Queue length: 0
+1741205812.728 - RECEIVE - Logical Clock: 492 - Received from VM 2. Queue length: 0
+1741205812.897 - INTERNAL - Logical Clock: 493 - Internal event occurred
+1741205813.065 - INTERNAL - Logical Clock: 494 - Internal event occurred
+1741205813.233 - RECEIVE - Logical Clock: 498 - Received from VM 1. Queue length: 0
+1741205813.400 - INTERNAL - Logical Clock: 499 - Internal event occurred
+1741205813.568 - RECEIVE - Logical Clock: 501 - Received from VM 2. Queue length: 0
+1741205813.736 - INTERNAL - Logical Clock: 502 - Internal event occurred
+1741205813.904 - INTERNAL - Logical Clock: 503 - Internal event occurred
+1741205814.072 - INTERNAL - Logical Clock: 504 - Internal event occurred
+1741205814.240 - INTERNAL - Logical Clock: 505 - Internal event occurred
+1741205814.409 - RECEIVE - Logical Clock: 510 - Received from VM 1. Queue length: 0
+1741205814.577 - INTERNAL - Logical Clock: 511 - Internal event occurred
+1741205814.745 - INTERNAL - Logical Clock: 512 - Internal event occurred
+1741205814.913 - INTERNAL - Logical Clock: 513 - Internal event occurred
+1741205815.082 - SEND - Logical Clock: 514 - Sent to VM 1
+1741205815.082 - SEND - Logical Clock: 515 - Sent to VM 2
+1741205815.249 - INTERNAL - Logical Clock: 516 - Internal event occurred
+1741205815.417 - RECEIVE - Logical Clock: 522 - Received from VM 2. Queue length: 0
+1741205815.586 - RECEIVE - Logical Clock: 523 - Received from VM 1. Queue length: 0
+1741205815.753 - RECEIVE - Logical Clock: 525 - Received from VM 2. Queue length: 0
+1741205815.921 - RECEIVE - Logical Clock: 528 - Received from VM 1. Queue length: 0
+1741205816.090 - INTERNAL - Logical Clock: 529 - Internal event occurred
+1741205816.257 - INTERNAL - Logical Clock: 530 - Internal event occurred
+1741205816.425 - RECEIVE - Logical Clock: 533 - Received from VM 2. Queue length: 1
+1741205816.593 - RECEIVE - Logical Clock: 535 - Received from VM 2. Queue length: 0
+1741205816.761 - RECEIVE - Logical Clock: 538 - Received from VM 2. Queue length: 0
+1741205816.929 - INTERNAL - Logical Clock: 539 - Internal event occurred
+1741205817.097 - INTERNAL - Logical Clock: 540 - Internal event occurred
+1741205817.265 - RECEIVE - Logical Clock: 544 - Received from VM 2. Queue length: 0
+1741205817.433 - RECEIVE - Logical Clock: 547 - Received from VM 2. Queue length: 0
+1741205817.601 - INTERNAL - Logical Clock: 548 - Internal event occurred
+1741205817.769 - INTERNAL - Logical Clock: 549 - Internal event occurred
+1741205817.937 - INTERNAL - Logical Clock: 550 - Internal event occurred
+1741205818.105 - INTERNAL - Logical Clock: 551 - Internal event occurred
+1741205818.273 - INTERNAL - Logical Clock: 552 - Internal event occurred
+1741205818.442 - RECEIVE - Logical Clock: 556 - Received from VM 1. Queue length: 0
+1741205818.610 - INTERNAL - Logical Clock: 557 - Internal event occurred
+1741205818.778 - INTERNAL - Logical Clock: 558 - Internal event occurred
+1741205818.947 - INTERNAL - Logical Clock: 559 - Internal event occurred
+1741205819.114 - RECEIVE - Logical Clock: 566 - Received from VM 2. Queue length: 0
+1741205819.282 - INTERNAL - Logical Clock: 567 - Internal event occurred
+1741205819.451 - INTERNAL - Logical Clock: 568 - Internal event occurred
+1741205819.619 - INTERNAL - Logical Clock: 569 - Internal event occurred
+1741205819.786 - INTERNAL - Logical Clock: 570 - Internal event occurred
+1741205819.955 - INTERNAL - Logical Clock: 571 - Internal event occurred
+1741205820.122 - RECEIVE - Logical Clock: 578 - Received from VM 1. Queue length: 0
+1741205820.291 - INTERNAL - Logical Clock: 579 - Internal event occurred
+1741205820.459 - RECEIVE - Logical Clock: 581 - Received from VM 1. Queue length: 0
+1741205820.626 - INTERNAL - Logical Clock: 582 - Internal event occurred
+1741205820.795 - SEND - Logical Clock: 583 - Sent to VM 2
+1741205820.963 - INTERNAL - Logical Clock: 584 - Internal event occurred
+1741205821.131 - INTERNAL - Logical Clock: 585 - Internal event occurred
+1741205821.299 - RECEIVE - Logical Clock: 591 - Received from VM 1. Queue length: 0
+1741205821.467 - INTERNAL - Logical Clock: 592 - Internal event occurred
+1741205821.635 - RECEIVE - Logical Clock: 595 - Received from VM 1. Queue length: 0
+1741205821.802 - INTERNAL - Logical Clock: 596 - Internal event occurred
+1741205821.970 - INTERNAL - Logical Clock: 597 - Internal event occurred
+1741205822.138 - INTERNAL - Logical Clock: 598 - Internal event occurred
+1741205822.306 - INTERNAL - Logical Clock: 599 - Internal event occurred
+1741205822.475 - INTERNAL - Logical Clock: 600 - Internal event occurred
+1741205822.643 - RECEIVE - Logical Clock: 605 - Received from VM 1. Queue length: 0
+1741205822.812 - RECEIVE - Logical Clock: 608 - Received from VM 1. Queue length: 0
+1741205822.980 - INTERNAL - Logical Clock: 609 - Internal event occurred
+1741205823.148 - RECEIVE - Logical Clock: 610 - Received from VM 2. Queue length: 1
+1741205823.315 - RECEIVE - Logical Clock: 612 - Received from VM 1. Queue length: 1
+1741205823.483 - RECEIVE - Logical Clock: 613 - Received from VM 1. Queue length: 0
+1741205823.651 - RECEIVE - Logical Clock: 618 - Received from VM 1. Queue length: 0
+1741205823.819 - RECEIVE - Logical Clock: 620 - Received from VM 1. Queue length: 0
+1741205823.987 - SEND - Logical Clock: 621 - Sent to VM 1
+1741205824.154 - INTERNAL - Logical Clock: 622 - Internal event occurred
+1741205824.322 - INTERNAL - Logical Clock: 623 - Internal event occurred
+1741205824.490 - RECEIVE - Logical Clock: 628 - Received from VM 1. Queue length: 0
+1741205824.659 - INTERNAL - Logical Clock: 629 - Internal event occurred
+1741205824.827 - SEND - Logical Clock: 630 - Sent to VM 1
+1741205824.828 - SEND - Logical Clock: 631 - Sent to VM 2
+1741205824.995 - INTERNAL - Logical Clock: 632 - Internal event occurred
+1741205825.163 - INTERNAL - Logical Clock: 633 - Internal event occurred
+1741205825.331 - INTERNAL - Logical Clock: 634 - Internal event occurred
+1741205825.500 - INTERNAL - Logical Clock: 635 - Internal event occurred
+1741205825.668 - RECEIVE - Logical Clock: 641 - Received from VM 1. Queue length: 0
+1741205825.836 - RECEIVE - Logical Clock: 644 - Received from VM 1. Queue length: 0
+1741205826.004 - INTERNAL - Logical Clock: 645 - Internal event occurred
+1741205826.173 - SEND - Logical Clock: 646 - Sent to VM 1
+1741205826.173 - SEND - Logical Clock: 647 - Sent to VM 2
+1741205826.341 - INTERNAL - Logical Clock: 648 - Internal event occurred
+1741205826.510 - SEND - Logical Clock: 649 - Sent to VM 1
+1741205826.678 - INTERNAL - Logical Clock: 650 - Internal event occurred
+1741205826.846 - INTERNAL - Logical Clock: 651 - Internal event occurred
+1741205827.014 - RECEIVE - Logical Clock: 658 - Received from VM 2. Queue length: 0
+1741205827.182 - INTERNAL - Logical Clock: 659 - Internal event occurred
+1741205827.351 - INTERNAL - Logical Clock: 660 - Internal event occurred
+1741205827.519 - INTERNAL - Logical Clock: 661 - Internal event occurred
+1741205827.686 - RECEIVE - Logical Clock: 665 - Received from VM 1. Queue length: 0
+1741205827.854 - INTERNAL - Logical Clock: 666 - Internal event occurred
+1741205828.022 - INTERNAL - Logical Clock: 667 - Internal event occurred
+1741205828.190 - RECEIVE - Logical Clock: 671 - Received from VM 2. Queue length: 0
+1741205828.358 - INTERNAL - Logical Clock: 672 - Internal event occurred
+1741205828.527 - INTERNAL - Logical Clock: 673 - Internal event occurred
+1741205828.694 - INTERNAL - Logical Clock: 674 - Internal event occurred
+1741205828.862 - INTERNAL - Logical Clock: 675 - Internal event occurred
+1741205829.030 - RECEIVE - Logical Clock: 681 - Received from VM 2. Queue length: 0
+1741205829.197 - RECEIVE - Logical Clock: 684 - Received from VM 2. Queue length: 0
+1741205829.365 - INTERNAL - Logical Clock: 685 - Internal event occurred
+1741205829.534 - INTERNAL - Logical Clock: 686 - Internal event occurred
+1741205829.703 - RECEIVE - Logical Clock: 688 - Received from VM 1. Queue length: 0
+1741205829.871 - INTERNAL - Logical Clock: 689 - Internal event occurred
+1741205830.038 - INTERNAL - Logical Clock: 690 - Internal event occurred
+1741205830.206 - INTERNAL - Logical Clock: 691 - Internal event occurred
+1741205830.375 - INTERNAL - Logical Clock: 692 - Internal event occurred
