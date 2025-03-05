@@ -96,3 +96,188 @@
 1741038962.370 - INTERNAL - Logical Clock: 389 - Internal event occurred
 1741038963.375 - SEND - Logical Clock: 390 - Sent to VM 1
 1741038963.375 - SEND - Logical Clock: 391 - Sent to VM 2
+1741204507.700 - INTERNAL - Logical Clock: 1 - Internal event occurred
+1741204507.952 - SEND - Logical Clock: 2 - Sent to VM 2
+1741204508.203 - SEND - Logical Clock: 3 - Sent to VM 1
+1741204508.203 - SEND - Logical Clock: 4 - Sent to VM 2
+1741204508.454 - INTERNAL - Logical Clock: 5 - Internal event occurred
+1741204508.705 - INTERNAL - Logical Clock: 6 - Internal event occurred
+1741204508.956 - INTERNAL - Logical Clock: 7 - Internal event occurred
+1741204509.207 - INTERNAL - Logical Clock: 8 - Internal event occurred
+1741204509.458 - INTERNAL - Logical Clock: 9 - Internal event occurred
+1741204509.710 - SEND - Logical Clock: 10 - Sent to VM 2
+1741204509.961 - SEND - Logical Clock: 11 - Sent to VM 1
+1741204509.962 - SEND - Logical Clock: 12 - Sent to VM 2
+1741204510.212 - INTERNAL - Logical Clock: 13 - Internal event occurred
+1741204510.464 - SEND - Logical Clock: 14 - Sent to VM 1
+1741204510.464 - SEND - Logical Clock: 15 - Sent to VM 2
+1741204510.715 - SEND - Logical Clock: 16 - Sent to VM 2
+1741204510.966 - INTERNAL - Logical Clock: 17 - Internal event occurred
+1741204511.217 - INTERNAL - Logical Clock: 18 - Internal event occurred
+1741204511.469 - INTERNAL - Logical Clock: 19 - Internal event occurred
+1741204511.720 - INTERNAL - Logical Clock: 20 - Internal event occurred
+1741204511.972 - INTERNAL - Logical Clock: 21 - Internal event occurred
+1741204512.223 - SEND - Logical Clock: 22 - Sent to VM 2
+1741204512.474 - INTERNAL - Logical Clock: 23 - Internal event occurred
+1741204512.725 - SEND - Logical Clock: 24 - Sent to VM 1
+1741204512.976 - INTERNAL - Logical Clock: 25 - Internal event occurred
+1741204513.227 - INTERNAL - Logical Clock: 26 - Internal event occurred
+1741204513.478 - INTERNAL - Logical Clock: 27 - Internal event occurred
+1741204513.729 - INTERNAL - Logical Clock: 28 - Internal event occurred
+1741204513.981 - SEND - Logical Clock: 29 - Sent to VM 2
+1741204514.232 - INTERNAL - Logical Clock: 30 - Internal event occurred
+1741204514.484 - SEND - Logical Clock: 31 - Sent to VM 2
+1741204514.734 - INTERNAL - Logical Clock: 32 - Internal event occurred
+1741204514.987 - INTERNAL - Logical Clock: 33 - Internal event occurred
+1741204515.241 - SEND - Logical Clock: 34 - Sent to VM 2
+1741204515.493 - SEND - Logical Clock: 35 - Sent to VM 2
+1741204515.744 - SEND - Logical Clock: 36 - Sent to VM 2
+1741204515.994 - INTERNAL - Logical Clock: 37 - Internal event occurred
+1741204516.244 - INTERNAL - Logical Clock: 38 - Internal event occurred
+1741204516.496 - INTERNAL - Logical Clock: 39 - Internal event occurred
+1741204516.747 - SEND - Logical Clock: 40 - Sent to VM 1
+1741204516.998 - INTERNAL - Logical Clock: 41 - Internal event occurred
+1741204517.249 - INTERNAL - Logical Clock: 42 - Internal event occurred
+1741204517.500 - INTERNAL - Logical Clock: 43 - Internal event occurred
+1741204517.752 - INTERNAL - Logical Clock: 44 - Internal event occurred
+1741204518.004 - SEND - Logical Clock: 45 - Sent to VM 2
+1741204518.255 - SEND - Logical Clock: 46 - Sent to VM 2
+1741204518.506 - INTERNAL - Logical Clock: 47 - Internal event occurred
+1741204518.757 - INTERNAL - Logical Clock: 48 - Internal event occurred
+1741204519.010 - SEND - Logical Clock: 49 - Sent to VM 2
+1741204519.260 - INTERNAL - Logical Clock: 50 - Internal event occurred
+1741204519.512 - SEND - Logical Clock: 51 - Sent to VM 1
+1741204519.763 - INTERNAL - Logical Clock: 52 - Internal event occurred
+1741204520.014 - INTERNAL - Logical Clock: 53 - Internal event occurred
+1741204520.265 - SEND - Logical Clock: 54 - Sent to VM 1
+1741204520.516 - INTERNAL - Logical Clock: 55 - Internal event occurred
+1741204520.767 - SEND - Logical Clock: 56 - Sent to VM 1
+1741204520.768 - SEND - Logical Clock: 57 - Sent to VM 2
+1741204521.018 - INTERNAL - Logical Clock: 58 - Internal event occurred
+1741204521.269 - INTERNAL - Logical Clock: 59 - Internal event occurred
+1741204521.520 - INTERNAL - Logical Clock: 60 - Internal event occurred
+1741204521.771 - INTERNAL - Logical Clock: 61 - Internal event occurred
+1741204522.022 - INTERNAL - Logical Clock: 62 - Internal event occurred
+1741204522.274 - INTERNAL - Logical Clock: 63 - Internal event occurred
+1741204522.527 - INTERNAL - Logical Clock: 64 - Internal event occurred
+1741204522.779 - INTERNAL - Logical Clock: 65 - Internal event occurred
+1741204523.030 - INTERNAL - Logical Clock: 66 - Internal event occurred
+1741204523.281 - INTERNAL - Logical Clock: 67 - Internal event occurred
+1741204523.533 - INTERNAL - Logical Clock: 68 - Internal event occurred
+1741204523.784 - SEND - Logical Clock: 69 - Sent to VM 1
+1741204523.784 - SEND - Logical Clock: 70 - Sent to VM 2
+1741204524.035 - INTERNAL - Logical Clock: 71 - Internal event occurred
+1741204524.287 - INTERNAL - Logical Clock: 72 - Internal event occurred
+1741204524.538 - INTERNAL - Logical Clock: 73 - Internal event occurred
+1741204524.790 - INTERNAL - Logical Clock: 74 - Internal event occurred
+1741204525.041 - INTERNAL - Logical Clock: 75 - Internal event occurred
+1741204525.293 - SEND - Logical Clock: 76 - Sent to VM 1
+1741204525.544 - INTERNAL - Logical Clock: 77 - Internal event occurred
+1741204525.795 - INTERNAL - Logical Clock: 78 - Internal event occurred
+1741204526.046 - INTERNAL - Logical Clock: 79 - Internal event occurred
+1741204526.297 - INTERNAL - Logical Clock: 80 - Internal event occurred
+1741204526.549 - SEND - Logical Clock: 81 - Sent to VM 2
+1741204526.799 - INTERNAL - Logical Clock: 82 - Internal event occurred
+1741204527.051 - INTERNAL - Logical Clock: 83 - Internal event occurred
+1741204527.302 - INTERNAL - Logical Clock: 84 - Internal event occurred
+1741204527.554 - SEND - Logical Clock: 85 - Sent to VM 1
+1741204527.554 - SEND - Logical Clock: 86 - Sent to VM 2
+1741204527.805 - SEND - Logical Clock: 87 - Sent to VM 1
+1741204528.056 - INTERNAL - Logical Clock: 88 - Internal event occurred
+1741204528.306 - INTERNAL - Logical Clock: 89 - Internal event occurred
+1741204528.562 - INTERNAL - Logical Clock: 90 - Internal event occurred
+1741204528.813 - INTERNAL - Logical Clock: 91 - Internal event occurred
+1741204529.065 - INTERNAL - Logical Clock: 92 - Internal event occurred
+1741204529.316 - INTERNAL - Logical Clock: 93 - Internal event occurred
+1741204529.567 - INTERNAL - Logical Clock: 94 - Internal event occurred
+1741204529.819 - INTERNAL - Logical Clock: 95 - Internal event occurred
+1741204530.069 - INTERNAL - Logical Clock: 96 - Internal event occurred
+1741204530.321 - SEND - Logical Clock: 97 - Sent to VM 1
+1741204530.321 - SEND - Logical Clock: 98 - Sent to VM 2
+1741204530.571 - INTERNAL - Logical Clock: 99 - Internal event occurred
+1741204530.822 - INTERNAL - Logical Clock: 100 - Internal event occurred
+1741204531.073 - INTERNAL - Logical Clock: 101 - Internal event occurred
+1741204531.325 - SEND - Logical Clock: 102 - Sent to VM 1
+1741204531.326 - SEND - Logical Clock: 103 - Sent to VM 2
+1741204531.576 - INTERNAL - Logical Clock: 104 - Internal event occurred
+1741204531.827 - INTERNAL - Logical Clock: 105 - Internal event occurred
+1741204532.078 - INTERNAL - Logical Clock: 106 - Internal event occurred
+1741204532.330 - INTERNAL - Logical Clock: 107 - Internal event occurred
+1741204532.581 - INTERNAL - Logical Clock: 108 - Internal event occurred
+1741204532.832 - SEND - Logical Clock: 109 - Sent to VM 1
+1741204533.083 - INTERNAL - Logical Clock: 110 - Internal event occurred
+1741204533.335 - SEND - Logical Clock: 111 - Sent to VM 1
+1741204533.586 - INTERNAL - Logical Clock: 112 - Internal event occurred
+1741204533.837 - INTERNAL - Logical Clock: 113 - Internal event occurred
+1741204534.088 - INTERNAL - Logical Clock: 114 - Internal event occurred
+1741204534.340 - SEND - Logical Clock: 115 - Sent to VM 1
+1741204534.591 - INTERNAL - Logical Clock: 116 - Internal event occurred
+1741204534.842 - INTERNAL - Logical Clock: 117 - Internal event occurred
+1741204535.093 - INTERNAL - Logical Clock: 118 - Internal event occurred
+1741204535.344 - INTERNAL - Logical Clock: 119 - Internal event occurred
+1741204535.597 - INTERNAL - Logical Clock: 120 - Internal event occurred
+1741204535.849 - INTERNAL - Logical Clock: 121 - Internal event occurred
+1741204536.101 - INTERNAL - Logical Clock: 122 - Internal event occurred
+1741204536.352 - SEND - Logical Clock: 123 - Sent to VM 1
+1741204536.353 - SEND - Logical Clock: 124 - Sent to VM 2
+1741204536.604 - SEND - Logical Clock: 125 - Sent to VM 2
+1741204536.854 - INTERNAL - Logical Clock: 126 - Internal event occurred
+1741204537.105 - INTERNAL - Logical Clock: 127 - Internal event occurred
+1741204537.356 - INTERNAL - Logical Clock: 128 - Internal event occurred
+1741204537.608 - INTERNAL - Logical Clock: 129 - Internal event occurred
+1741204537.859 - INTERNAL - Logical Clock: 130 - Internal event occurred
+1741204538.110 - INTERNAL - Logical Clock: 131 - Internal event occurred
+1741204538.361 - INTERNAL - Logical Clock: 132 - Internal event occurred
+1741204538.613 - INTERNAL - Logical Clock: 133 - Internal event occurred
+1741204538.863 - INTERNAL - Logical Clock: 134 - Internal event occurred
+1741204539.114 - SEND - Logical Clock: 135 - Sent to VM 1
+1741204539.365 - INTERNAL - Logical Clock: 136 - Internal event occurred
+1741204539.616 - INTERNAL - Logical Clock: 137 - Internal event occurred
+1741204539.868 - INTERNAL - Logical Clock: 138 - Internal event occurred
+1741204540.119 - INTERNAL - Logical Clock: 139 - Internal event occurred
+1741204540.371 - INTERNAL - Logical Clock: 140 - Internal event occurred
+1741204540.622 - INTERNAL - Logical Clock: 141 - Internal event occurred
+1741204540.873 - INTERNAL - Logical Clock: 142 - Internal event occurred
+1741204541.126 - SEND - Logical Clock: 143 - Sent to VM 1
+1741204541.128 - SEND - Logical Clock: 144 - Sent to VM 2
+1741204541.376 - INTERNAL - Logical Clock: 145 - Internal event occurred
+1741204541.627 - INTERNAL - Logical Clock: 146 - Internal event occurred
+1741204541.878 - INTERNAL - Logical Clock: 147 - Internal event occurred
+1741204542.129 - INTERNAL - Logical Clock: 148 - Internal event occurred
+1741204542.381 - INTERNAL - Logical Clock: 149 - Internal event occurred
+1741204542.632 - INTERNAL - Logical Clock: 150 - Internal event occurred
+1741204542.886 - SEND - Logical Clock: 151 - Sent to VM 1
+1741204543.136 - INTERNAL - Logical Clock: 152 - Internal event occurred
+1741204543.389 - INTERNAL - Logical Clock: 153 - Internal event occurred
+1741204543.639 - INTERNAL - Logical Clock: 154 - Internal event occurred
+1741204543.891 - SEND - Logical Clock: 155 - Sent to VM 1
+1741204543.892 - SEND - Logical Clock: 156 - Sent to VM 2
+1741204544.142 - INTERNAL - Logical Clock: 157 - Internal event occurred
+1741204544.394 - INTERNAL - Logical Clock: 158 - Internal event occurred
+1741204544.645 - INTERNAL - Logical Clock: 159 - Internal event occurred
+1741204544.896 - INTERNAL - Logical Clock: 160 - Internal event occurred
+1741204545.148 - INTERNAL - Logical Clock: 161 - Internal event occurred
+1741204545.399 - SEND - Logical Clock: 162 - Sent to VM 2
+1741204545.651 - INTERNAL - Logical Clock: 163 - Internal event occurred
+1741204545.906 - INTERNAL - Logical Clock: 164 - Internal event occurred
+1741204546.157 - INTERNAL - Logical Clock: 165 - Internal event occurred
+1741204546.408 - SEND - Logical Clock: 166 - Sent to VM 1
+1741204546.659 - INTERNAL - Logical Clock: 167 - Internal event occurred
+1741204546.910 - INTERNAL - Logical Clock: 168 - Internal event occurred
+1741204547.162 - INTERNAL - Logical Clock: 169 - Internal event occurred
+1741204547.413 - INTERNAL - Logical Clock: 170 - Internal event occurred
+1741204547.673 - SEND - Logical Clock: 171 - Sent to VM 1
+1741204547.925 - SEND - Logical Clock: 172 - Sent to VM 2
+1741204548.176 - INTERNAL - Logical Clock: 173 - Internal event occurred
+1741204548.427 - INTERNAL - Logical Clock: 174 - Internal event occurred
+1741204548.678 - INTERNAL - Logical Clock: 175 - Internal event occurred
+1741204548.929 - INTERNAL - Logical Clock: 176 - Internal event occurred
+1741204549.179 - INTERNAL - Logical Clock: 177 - Internal event occurred
+1741204549.430 - INTERNAL - Logical Clock: 178 - Internal event occurred
+1741204549.681 - SEND - Logical Clock: 179 - Sent to VM 1
+1741204549.934 - INTERNAL - Logical Clock: 180 - Internal event occurred
+1741204550.183 - INTERNAL - Logical Clock: 181 - Internal event occurred
+1741204550.436 - INTERNAL - Logical Clock: 182 - Internal event occurred
+1741204550.687 - INTERNAL - Logical Clock: 183 - Internal event occurred
+1741204550.938 - INTERNAL - Logical Clock: 184 - Internal event occurred
+1741204551.189 - INTERNAL - Logical Clock: 185 - Internal event occurred

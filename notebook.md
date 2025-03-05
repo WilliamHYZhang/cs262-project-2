@@ -70,6 +70,30 @@ Under these new conditions, logical clocks remained closer to each other with fe
 
 This rerun highlights the sensitivity of logical clock behavior to timing parameters and event probabilities, demonstrating how even modest parameter adjustments significantly improve overall synchronization and message-handling efficiency.
 
+### Other Settings
+
+We explored further variations to evaluate system behavior under extreme conditions, particularly focusing on scenarios with significantly higher variability in tick rates and event probabilities:
+
+```python
+# Extreme variation simulation:
+self.clock_rate = random.randint(1, 50)  # High variability in tick rate (1-50 ticks/sec)
+rand_val = random.randint(1, 50)         # Wide range of event probabilities
+```
+
+Under these extreme conditions, the following observations were noted:
+
+- **Highly Irregular Logical Clock Progression:**
+  The vast disparity in clock rates caused some VMs to rapidly outpace others, leading to significant differences in logical clock values. This resulted in dramatic clock "jumps" when slower VMs received messages from faster counterparts.
+
+- **Message Queue Instability:**
+  VM nodes with lower clock rates struggled to handle incoming message traffic, often experiencing message queues that quickly grew beyond manageable limits. This resulted in message processing delays, further exacerbating clock discrepancies.
+
+- **Increased Network Congestion:**
+  With a wide event probability range, frequent bursts of simultaneous send events occurred. These bursts generated temporary network congestion and further imbalanced workload distribution across VMs.
+
+- **Reduced Predictability:**
+  The randomness of the high variability scenario significantly lowered the predictability of system behavior, making analysis more challenging but also clearly demonstrating the robustness of the Lamport logical clock mechanism under highly asynchronous conditions.
+
 ## Conclusions
 All trials demonstrate consistent underlying behavior:
 - The system reliably adheres to the Lamport clock mechanism despite variations in tick rates.

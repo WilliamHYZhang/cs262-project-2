@@ -6,7 +6,7 @@ import time
 import argparse
 
 class VirtualMachine:
-    def __init__(self, vm_id, port, peers, trial):
+    def __init__(self, vm_id, port, peers, trial, duration):
         self.vm_id = vm_id
         self.port = port
         self.peers = peers  # dict mapping peer id to websocket URL
@@ -16,6 +16,7 @@ class VirtualMachine:
         self.connections = {}  # mapping: peer id -> websocket connection
         self.log_filename = f"vm_{vm_id}_trial{trial}.log"
         self.log_file = open(self.log_filename, "a")
+        self.duration = duration
         print(f"VM {self.vm_id}: Clock rate = {self.clock_rate} ticks/sec. Log file: {self.log_filename}")
 
     def log_event(self, event_type, details):
@@ -66,9 +67,10 @@ class VirtualMachine:
             print(f"VM {self.vm_id}: No connection to peer {peer_id}")
 
     async def simulation_loop(self):
+        start_time = time.time()
         tick_interval = 1 / self.clock_rate
-        while True:
-            start_tick = time.time()
+        while time.time() - start_time < self.duration:
+            loop_tick_start = time.time()
             if not self.msg_queue.empty():
                 msg = await self.msg_queue.get()
                 received_clock = msg.get("clock", 0)
@@ -99,28 +101,37 @@ class VirtualMachine:
                     self.logical_clock += 1
                     self.log_event("INTERNAL", "Internal event occurred")
 
-            elapsed = time.time() - start_tick
+            elapsed = time.time() - loop_tick_start
             await asyncio.sleep(max(0, tick_interval - elapsed))
 
     async def run(self):
-        await self.start_server()
+        server = await self.start_server()
+        # Allow some time for all servers to start.
         await asyncio.sleep(2)
         await self.connect_to_peers()
         await self.simulation_loop()
+        # Gracefully close connections and the server.
+        self.log_file.close()
+        server.close()
+        await server.wait_closed()
+        # Also, close all peer connections.
+        for ws in self.connections.values():
+            await ws.close()
 
-async def main(vm_id, trial):
+async def main(vm_id, trial, duration):
     ports = {1: 8001, 2: 8002, 3: 8003}
     all_peers = {1: f"ws://localhost:{ports[1]}",
                  2: f"ws://localhost:{ports[2]}",
                  3: f"ws://localhost:{ports[3]}"}
     peers = {peer_id: url for peer_id, url in all_peers.items() if peer_id != vm_id}
     port = ports[vm_id]
-    vm = VirtualMachine(vm_id, port, peers, trial)
+    vm = VirtualMachine(vm_id, port, peers, trial, duration)
     await vm.run()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Distributed Virtual Machine Simulation")
     parser.add_argument("--id", type=int, required=True, help="ID of the virtual machine (1, 2, or 3)")
     parser.add_argument("--trial", type=int, default=1, help="Trial number for log file differentiation")
+    parser.add_argument("--duration", type=int, default=60, help="Duration (in seconds) to run the simulation")
     args = parser.parse_args()
-    asyncio.run(main(args.id, args.trial))
+    asyncio.run(main(args.id, args.trial, args.duration))
