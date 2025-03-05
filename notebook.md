@@ -23,27 +23,61 @@ The goal of this project was to simulate a small asynchronous distributed system
 
 ## Observations from Trials
 
-Here we focus specifically on Trials 1 and 2, but we observe similar behavior across all trials.
+After running five trials, we parsed each VM’s log and generated **three composite plots**, each containing side‐by‐side subplots for Trials 1 through 5:
 
-### Trial 1
-- **VM1 Observations:**  
-  VM1 has a tick rate of approximately **1 tick/sec**, evidenced by consistent ~1-second intervals between internal events. The log for VM1 begins with send events (logical clock values 1 and 2). Shortly thereafter, a receive event causes the clock to jump to 11 (demonstrating the Lamport update rule). Several receive events follow (e.g., jumps from 14 to 27 and then to 33), indicating that messages arriving from VM2 carried higher clock values. Internal events then increment the clock gradually.
+1. **Composite Average Inter‐Event Time (Figure 1)**  
+2. **Composite Logical Clock Progression (Figure 2)**  
+3. **Composite Queue Length (Figure 3)**  
 
-- **VM2 Observations:**  
-  VM2 exhibits a significantly higher tick rate (~4 ticks/sec), logging frequent events at shorter intervals. Its log starts with internal events and proceeds to send messages to both VM3 and VM1. Its logical clock increases smoothly, with occasional bursts in the message queue length, suggesting it sometimes receives messages faster than it can process them.
+> **Figure 1:** *Composite Avg Inter‐Event Time per Trial*  
+> Each subplot shows the average time between consecutive log entries for VM1, VM2, and VM3 in a single trial.
 
-- **VM3 Observations:**  
-  VM3 also operates at about **1 tick/sec**, initially logging internal events and later starting to receive messages from both VM1 and VM2. Its logical clock increments modestly during early events and later shows send events propagating its own clock values. The slower tick rate leads to notable clock jumps when receiving messages from the faster VM2.
+![Composite Avg Inter‐Event Time per Trial](graphs/normal/composite_avg_inter_event.png)
 
-### Trial 2
-- **VM1 Observations:**  
-  VM1 increases its tick rate to approximately **5 ticks/sec**, resulting in frequent internal and send events. It exhibits a rhythmic pattern initially—with early send events (clock values 1–2) followed by internal and additional send events (clock values 4–5). Message receptions (e.g., at logical clocks 19 and 22) show visible jumps. Although pacing differs slightly from Trial 1, the underlying mechanism remains consistent.
+> **Figure 2:** *Composite Logical Clock per Trial*  
+> Each subplot shows how the logical clocks of VM1, VM2, and VM3 progress over time (0–60s) within one trial.
 
-- **VM2 Observations:**  
-  VM2's tick rate decreases significantly to about **1 tick/sec**, becoming the slowest node and experiencing significant message queue backlogs. Logs indicate higher incoming message rates with longer queues (sometimes exceeding 20 messages), signifying burstier traffic.
+![Composite Logical Clock per Trial](graphs/normal/composite_logical_clock.png)
 
-- **VM3 Observations:**  
-  VM3 operates at a moderate tick rate (~3 ticks/sec), showing a balanced event-processing rate and queue management. It demonstrates a mix of internal, send, and receive events. The logical clock increments steadily until significant jumps occur upon message reception.
+> **Figure 3:** *Composite Queue Length per Trial*  
+> Each subplot shows how often each VM’s message queue grows, reflecting periods when messages arrive faster (or slower) than they can be processed.
+
+![Composite Queue Length per Trial](graphs/normal/composite_queue_length.png)
+
+Below is a summary of the key behaviors visible in the new plots:
+
+### 1. Average Inter‐Event Time
+- In **Figure 1**, each bar chart subplot shows that VM1, VM2, and VM3 have different average inter‐event times (ranging roughly from 0.1 s to 0.7 s in these trials). 
+- These differences mainly stem from each VM’s randomly assigned **clock rate** and the proportion of internal vs. send events.
+- When a VM has a higher clock rate, it tends to log more frequent events, leading to a smaller average inter‐event time. Conversely, slower VMs have fewer events per second and thus larger gaps between log entries.
+
+### 2. Logical Clock Progression
+- In **Figure 2**, you can see that all three VMs’ logical clocks start near 0 s on the time axis and grow steadily until around 60 s. 
+- Some trials show very close (almost overlapping) lines for the three VMs, indicating that their tick rates and message exchange rates were similar. Other trials have one VM outpacing the others (its line on the chart climbs more steeply), showing it incremented its clock more frequently—either from faster internal ticks or from receiving higher‐clock messages from peers.
+- Notice occasional “crossovers” or abrupt vertical separations when a VM receives a message carrying a significantly larger clock value, forcing it to jump to match that clock + 1.
+
+### 3. Queue Length Dynamics
+- In **Figure 3**, each subplot corresponds to a single trial. Most VMs maintain a queue length near zero, but some show sudden spikes (up to 3–5 or more) when messages arrive in rapid bursts. 
+- These spikes often happen if a VM’s clock rate is slower or if random event generation leads to multiple sends from other VMs in quick succession. The slower VM may accumulate incoming messages before it processes them, temporarily inflating its queue length.
+
+## Detailed Per‐Trial Highlights
+
+Even though each trial has unique random seeds, the patterns are consistent:
+
+- **Trial 1**: 
+  - VM1: Moderate clock rate; occasional queue spikes.
+  - VM2: Slightly faster rate, sending more messages, often forcing VM1 and VM3 to “catch up” on their logical clocks.
+  - VM3: Slower clock, experiences some queue buildup when VM2 bursts messages.
+
+- **Trial 2**: 
+  - VM1: Faster clock rate, leading to more frequent send events and smaller average inter‐event times.
+  - VM2: Slowest clock here, building up its queue occasionally and having more “jumps” upon receiving high‐clock messages from VM1.
+  - VM3: Intermediate rate, balancing both sends and receives, with moderate queue spikes.
+
+- **Trials 3, 4, 5**: 
+  - Similar patterns emerge—random differences in tick rates cause varying degrees of clock divergence. 
+  - Some trials show large queue spikes for VM2 (when it’s slower or receiving bursts), while others have VM1 or VM3 as the bottleneck. 
+  - The average inter‐event time can shift drastically if a VM’s random clock rate is at the high end (6 ticks/sec) or low end (1 tick/sec).
 
 ### General Findings
 Across all trials—including Trials 1 and 2—the core behavior remains consistent:
@@ -51,48 +85,133 @@ Across all trials—including Trials 1 and 2—the core behavior remains consist
 - **Asynchronous Processing:** Logical clocks “drift” apart based solely on causal ordering and randomized event selection, despite underlying physical time synchronization.
 - **Message Queue Dynamics:** Variations in message queue lengths reflect differences in how fast VMs process messages relative to their arrival rates. This affects the magnitude of logical clock jumps when messages are processed.
 
-### Running with Smaller Variations and Lower Event Probabilities
-We reran the simulation with the following modifications from the original design:
-- **Reduced Clock Rate Variation:** Adjusted tick rates to a smaller range (1–2 ticks/sec) to limit the clock frequency disparity among VMs.
-- **Lower Internal Event Probability:** Increased the likelihood of send events (reduced probability of internal events), making interactions between VMs more frequent.
+## Observations from the Described Parameters
+
+1. **Clock Rates Restricted to 1–2 ticks/sec**  
+   By limiting each VM’s clock rate to either 1 or 2 ticks/sec, we remove the extreme disparities seen in the original 1–6 ticks/sec range. This narrower range yields more similar event frequencies across all three VMs, helping them stay more closely “in sync.”
 
 ```python
-# Original code:
-self.clock_rate = random.randint(1, 6)  # Original tick rate range
-rand_val = random.randint(1, 10)        # Original event probability
-
-# Modified for rerun with smaller variations and lower internal event probability:
-self.clock_rate = random.randint(1, 2)  # Reduced tick rate variation (1–2 ticks/sec)
-rand_val = random.randint(1, 5)         # Increased send event probability (e.g., internal events less likely)
+self.clock_rate = random.randint(1, 2)
 ```
 
-Under these new conditions, logical clocks remained closer to each other with fewer and smaller jumps in logical clock values. The message queues maintained shorter lengths, reflecting a smoother flow of messages between VMs. This resulted in increased synchronization and decreased message congestion compared to trials with higher variation and internal event probabilities.
+2. **Higher Send Probability (Fewer Internal Events)**  
+   Reducing `rand_val` from a 1–10 range down to 1–5 increases the chance of a send event at each tick (and thus lowers the chance of an internal event). This leads to:
+   - More frequent cross‐VM communication, which helps synchronize logical clocks more tightly (fewer large clock “jumps”).  
+   - Fewer purely local increments of the logical clock (internal events), so we see a steadier progression of the clocks as messages flow among the three VMs.
 
-This rerun highlights the sensitivity of logical clock behavior to timing parameters and event probabilities, demonstrating how even modest parameter adjustments significantly improve overall synchronization and message-handling efficiency.
+```python
+rand_val = random.randint(1, 5)
+```
 
-### Other Settings
+---
 
-We explored further variations to evaluate system behavior under extreme conditions, particularly focusing on scenarios with significantly higher variability in tick rates and event probabilities:
+### 1. Composite Average Inter‐Event Time
+
+> **Figure: Composite Avg Inter‐Event Time**  
+> Each subplot corresponds to one trial, with three bars for VM1, VM2, and VM3.
+
+![Composite Avg Inter‐Event Time per Trial](graphs/described/composite_avg_inter_event.png)
+
+- **Closer Ranges Across VMs:**  
+  Because the clock rates are all between 1 and 2, the average inter‐event times for the three VMs typically fall within a narrower band—often around 0.6 s to 1.2 s.
+- **More Consistent Across Trials:**  
+  Compared to the original runs (1–6 ticks/sec), these new trials show smaller differences from trial to trial. We no longer see one VM with a significantly higher frequency of events, so the bar heights are more comparable.
+
+---
+
+### 2. Composite Logical Clock Progression
+
+> **Figure: Composite Logical Clock**  
+> Each subplot shows the logical clocks of VM1, VM2, and VM3 from time 0 to ~60 s for a single trial.
+
+![Composite Logical Clock per Trial](graphs/described/composite_logical_clock.png)
+
+- **Nearly Overlapping Lines:**  
+  With more frequent sends and closer tick rates, all three lines for each trial often appear tightly grouped. One VM may still outpace the others slightly, but big divergences are rare.
+- **Fewer Sudden Jumps:**  
+  Because messages are exchanged more steadily, no single VM gets “far ahead” in logical clock value. Consequently, when a slower VM receives a message from a faster one, the update is modest (e.g., going from 20 to 22) rather than huge leaps.
+- **Smoother Increments:**  
+  We still see an overall upward slope, but with fewer “plateaus” because the probability of sending is higher, prompting more frequent cross‐VM synchronization.
+
+---
+
+### 3. Composite Queue Length
+
+> **Figure: Composite Queue Length**  
+> Each subplot shows how the queue length evolves for VM1, VM2, and VM3 over 60 s in a single trial.
+
+![Composite Queue Length per Trial](graphs/described/composite_queue_length.png)
+
+- **Shorter Spikes:**  
+  With more balanced event frequencies, most VMs rarely accumulate large message backlogs. Typical queue lengths stay in the 0–3 range, compared to earlier trials where one VM might spike above 10 if it was significantly slower.
+- **Smoother Message Flow:**  
+  Because messages are exchanged more frequently, arrivals are more evenly distributed, preventing big surges of unprocessed messages. The queue length lines still have some small peaks, but they’re notably smaller than in the original runs.
+
+---
+
+### Overall Impact of the New Parameters
+
+- **Better Synchronization:**  
+  The frequent cross‐VM communication (fewer internal events) causes the VMs’ logical clocks to remain more closely aligned throughout the 60 s runs.
+- **Reduced Congestion:**  
+  Narrower tick‐rate ranges help avoid the scenario of one VM sending an overwhelming number of messages to slower peers, so queue lengths remain smaller and more stable.
+- **Improved Predictability:**  
+  With fewer extremes in event timing, it becomes easier to anticipate how the system will behave. The Lamport clocks progress in a more uniform fashion, and analyzing the logs is simpler.
+
+## Other Settings: Highly Variable Clock Rates and Event Probabilities
+
+To explore extreme conditions, we modified the simulation parameters as follows:
 
 ```python
 # Extreme variation simulation:
-self.clock_rate = random.randint(1, 20)  # High variability in tick rate (1-50 ticks/sec)
+self.clock_rate = random.randint(1, 20)  # High variability in tick rate
 rand_val = random.randint(1, 20)         # Wide range of event probabilities
 ```
 
-Under these extreme conditions, the following observations were noted:
+Under these settings, each VM might tick as slowly as 1 tick/sec or as quickly as 20 ticks/sec, and it can choose send vs. internal events with highly variable probabilities. This creates a **highly asynchronous** environment where some VMs can rapidly outpace others, potentially leading to large logical clock discrepancies and significant queue buildup.
 
-- **Highly Irregular Logical Clock Progression:**
-  The vast disparity in clock rates caused some VMs to rapidly outpace others, leading to significant differences in logical clock values. This resulted in dramatic clock "jumps" when slower VMs received messages from faster counterparts.
+After running five such trials, we again collected the logs from VM1, VM2, and VM3, then generated three **composite plots**:
 
-- **Message Queue Instability:**
-  VM nodes with lower clock rates struggled to handle incoming message traffic, often experiencing message queues that quickly grew beyond manageable limits. This resulted in message processing delays, further exacerbating clock discrepancies.
+1. **Composite Average Inter‐Event Time (Figure 1)**  
+2. **Composite Logical Clock Progression (Figure 2)**  
+3. **Composite Queue Length (Figure 3)**  
 
-- **Increased Network Congestion:**
-  With a wide event probability range, frequent bursts of simultaneous send events occurred. These bursts generated temporary network congestion and further imbalanced workload distribution across VMs.
+> **Figure 1:** *Composite Avg Inter‐Event Time per Trial*  
+> Each subplot shows the average time between consecutive log entries for VM1, VM2, and VM3 in a single trial under extreme variability.
 
-- **Reduced Predictability:**
-  The randomness of the high variability scenario significantly lowered the predictability of system behavior, making analysis more challenging but also clearly demonstrating the robustness of the Lamport logical clock mechanism under highly asynchronous conditions.
+![Composite Avg Inter‐Event Time per Trial](graphs/other/composite_avg_inter_event.png)
+
+> **Figure 2:** *Composite Logical Clock per Trial*  
+> Each subplot shows how the logical clocks of VM1, VM2, and VM3 progress over time (0–60 s) in each of the five trials.
+
+![Composite Logical Clock per Trial](graphs/other/composite_logical_clock.png)
+
+> **Figure 3:** *Composite Queue Length per Trial*  
+> Each subplot shows how often each VM’s message queue grows, reflecting the bursts of message arrivals and how quickly (or slowly) they are processed.
+
+![Composite Queue Length per Trial](graphs/other/composite_queue_length.png)
+
+Below is a summary of key behaviors in these “other settings” runs:
+
+### 1. Composite Average Inter‐Event Time
+- **Large Disparities Across VMs:**  
+  Because a VM might tick at 20 ticks/sec while another is at 1 tick/sec, the difference in event frequencies can be enormous. Fast VMs may log events every 0.05 s on average, while slower ones might log events closer to 1.0 s apart.
+- **High Variance Among Trials:**  
+  The random selection of clock rates for each trial leads to unpredictable distributions of average inter‐event times. One trial may have two VMs at high rates and one at low, while another has the opposite distribution.
+
+### 2. Logical Clock Progression
+- **Highly Irregular Progression:**  
+  In **Figure 2**, you can see some trials where one VM’s logical clock climbs **much faster** than the others, sometimes reaching hundreds more ticks by the end of the 60 s run.
+- **Large Jumps for Slower VMs:**  
+  When a slower VM receives messages from a much faster VM, it must jump its clock to match. These jumps can be very large, e.g., from 50 up to 200 in one event, if the faster VM’s clock is far ahead.
+- **Occasional Overlaps:**  
+  If two or three VMs happen to draw similar clock rates, their lines overlap more closely, but that’s largely a matter of chance with the 1–20 range.
+
+### 3. Queue Length Dynamics
+- **Burstiness and Backlogs:**  
+  In **Figure 3**, we see some subplots where a single VM’s queue length spikes to very high levels (e.g., 5–10 or more) if it’s ticking slowly and multiple sends arrive in quick succession from faster VMs.
+- **Variable Stability:**  
+  Some trials remain relatively stable if the VMs’ random rates happen to be similar, while others show repeated large queue spikes. This underscores how the random selection of tick rates can drastically affect system behavior.
 
 ## Conclusions
 All trials demonstrate consistent underlying behavior:
