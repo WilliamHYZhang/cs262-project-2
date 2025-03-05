@@ -15,7 +15,7 @@ class VirtualMachine:
         self.msg_queue = asyncio.Queue()
         self.connections = {}  # mapping: peer id -> websocket connection
         self.log_filename = f"vm_{vm_id}_trial{trial}.log"
-        self.log_file = open(self.log_filename, "a")
+        self.log_file = open(self.log_filename, "w")
         self.duration = duration
         print(f"VM {self.vm_id}: Clock rate = {self.clock_rate} ticks/sec. Log file: {self.log_filename}")
 
