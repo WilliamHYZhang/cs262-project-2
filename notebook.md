@@ -244,7 +244,7 @@ After running five such trials, we collected the logs from VM1, VM2, and VM3, th
    Running for 600 seconds (rather than 60 seconds) provides a clearer picture of how small initial differences in clock rates compound over time, resulting in large queue backlogs or huge clock jumps.
 
 3. **Lamport Clocks Still Enforce Causality**  
-   Despite these extremes, each VM’s clock eventually “catches up” upon processing incoming messages. The large jumps reflect the system’s strong adherence to Lamport’s rule (\( \text{new\_clock} = \max(\text{local\_clock}, \text{received\_clock}) + 1 \)), ensuring causality is maintained.
+   Despite these extremes, each VM’s clock eventually “catches up” upon processing incoming messages. The large jumps reflect the system’s strong adherence to Lamport’s rule `new_clock = max(local_clock, received_clock) + 1`, ensuring causality is maintained.
 
 4. **Unpredictable Outcomes**  
    The wide parameter range makes trial outcomes highly random. Some runs remain relatively stable if clock rates happen to be similar, while others produce dramatic disparities.
