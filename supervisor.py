@@ -25,5 +25,5 @@ if __name__ == "__main__":
     for trial in range(1, num_trials + 1):
         print(f"\n--- Starting Trial {trial} ---")
         run_trial(trial, duration)
-        # Optional: pause between trials
+        # pause between trials
         time.sleep(5)
